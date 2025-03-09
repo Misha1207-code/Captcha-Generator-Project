@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced CAPTCHA Generator</title>
+    <link rel="stylesheet" href="stylingforcaptcha.css">
+</head>
+<body>
+    <div class="container">
+        <h2>🔐 CAPTCHA Verification</h2>
+        <canvas id="captchaCanvas"></canvas>
+        <button onclick="generateCaptcha()">🔄 Refresh CAPTCHA</button>
+        <input type="text" id="captchaInput" placeholder="Enter CAPTCHA">
+        
+        <div class="options">
+            <label><input type="checkbox" id="caseSensitive"> Case-Sensitive</label>
+            <label><input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()"> Dark Mode</label>
+        </div>
+
+        <div class="buttons">
+            <button onclick="validateCaptcha()">✅ Verify</button>
+            <button onclick="clearInput()">❌ Clear</button>
+        </div>
+
+        <p id="captchaMessage"></p>
+    </div>
+
+    <script src="jscriptforcaptcha.js"></script>
+</body>
+</html>
