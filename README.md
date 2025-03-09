@@ -1,9 +1,9 @@
 **About the Project**
 The Enhanced CAPTCHA Generator is a web-based security tool that helps verify if a user is human by generating a random CAPTCHA code that must be entered correctly. It prevents bots from accessing websites and includes features like:
-Automatic CAPTCHA refresh after incorrect attempts
-Case sensitivity toggle for added security
-Dark mode for better user experience
-Modern and responsive design
+1. Automatic CAPTCHA refresh after incorrect attempts
+2. Case sensitivity toggle for added security
+3. Dark mode for better user experience
+4. Modern and responsive design
 
 **Technologies Used**
 1. HTML (Structure)
