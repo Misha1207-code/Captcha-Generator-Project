@@ -1,5 +1,5 @@
 let captchaText = "";
-
+//Function to generate a new CAPTCHA
 function generateCaptcha() {
     const canvas = document.getElementById("captchaCanvas");
     const ctx = canvas.getContext("2d");
@@ -9,7 +9,7 @@ function generateCaptcha() {
     canvas.width = 250;
     canvas.height = 80;
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 7; i++) {
         captchaText += chars[Math.floor(Math.random() * chars.length)];
     }
 
