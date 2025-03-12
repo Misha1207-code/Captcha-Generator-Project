@@ -12,8 +12,8 @@ function generateCaptcha() {
     for (let i = 0; i < 7; i++) {
         captchaText += chars[Math.floor(Math.random() * chars.length)];
     }
+    ctx['fillStyle'] = "#eee";
 
-    ctx.fillStyle = "#eee";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     for (let i = 0; i < 100; i++) {
