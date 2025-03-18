@@ -16,16 +16,29 @@
         <div class="options">
             <label><input type="checkbox" id="caseSensitive"> Case-Sensitive</label>
             <label><input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()"> Dark Mode</label>
+            <label><input type="checkbox" id="audioCaptcha" onclick="toggleAudioCaptcha()"> Audio CAPTCHA</label>
         </div>
 
         <div class="buttons">
             <button onclick="validateCaptcha()">✅ Verify</button>
             <button onclick="clearInput()">❌ Clear</button>
+            <button id="audioButton" onclick="playAudioCaptcha()" style="display:none;">🔊 Play Audio</button>
         </div>
 
         <p id="captchaMessage"></p>
     </div>
 
     <script src="jscriptforcaptcha.js"></script>
+    <script>
+        function toggleAudioCaptcha() {
+            const audioButton = document.getElementById('audioButton');
+            const audioCheckbox = document.getElementById('audioCaptcha');
+            if(audioCheckbox.checked) {
+                audioButton.style.display = 'block';
+            } else {
+                audioButton.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
