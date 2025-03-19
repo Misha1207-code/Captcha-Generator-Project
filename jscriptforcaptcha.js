@@ -42,6 +42,25 @@ function generateCaptcha() {
         ctx.restore();
         x += 35;
     }
+
+    // Add a subtle wave distortion effect
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+    for (let y = 0; y < canvas.height; y++) {
+        for (let x = 0; x < canvas.width; x++) {
+            const displacement = Math.sin(y / 10) * 5; // Adjust the wave strength
+            const newX = x + displacement;
+            if (newX >= 0 && newX < canvas.width) {
+                const index = (y * canvas.width + x) * 4;
+                const newIndex = (y * canvas.width + Math.floor(newX)) * 4;
+                data[index] = imageData.data[newIndex];
+                data[index + 1] = imageData.data[newIndex + 1];
+                data[index + 2] = imageData.data[newIndex + 2];
+                data[index + 3] = imageData.data[newIndex + 3];
+            }
+        }
+    }
+    ctx.putImageData(imageData, 0, 0);
 }
 
 function validateCaptcha() {
