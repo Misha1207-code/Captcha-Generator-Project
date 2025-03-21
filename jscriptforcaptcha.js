@@ -88,7 +88,7 @@ function clearInput() {
 }
 
 function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("dark mode");
 }
 
 window.onload = generateCaptcha;
